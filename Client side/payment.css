@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Uchen', serif;
+}
+
+:root {
+    --accent-color: #a7727d82;
+    --primary-color: #EDDBC7;
+    --secondary-color: #A7727D;
+    --white: #fff;
+    --black: #000;
+}
+
+.container {
+    background: url('https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80') center center/cover no-repeat;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.makereservation {
+    background-color: var(--primary-color);
+    ;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.makereservation h2 {
+    margin-top: 20px;
+    /* Add margin-top to increase space */
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+.saluation {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.pay-now-btn {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+.pay-now-btn:hover {
+    background-color: var(--accent-color);
+}
+
+.card-details {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card-number-field,
+.date-number-field,
+.cvv-number-field,
+.card-name-field {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.card-number-field,
+.date-number-field,
+.cvv-number-field {
+    background-color: #f9f9f9;
+}
+
+.submit-now-btn {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-now-btn:hover {
+    background-color: var(--accent-color);
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="cart.css">
+    <title>CakeBake</title>
+</head>
+
+<body>
+    <header>
+        <div class="welcome-message">
+            <h1>Welcome <?php session_start(); $user = $_SESSION["user"]; echo htmlspecialchars($user["name"]); ?> to Our Web Application!</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Cakes</h2>
+            <div class="product-grid" id="cake-grid">
+                <!-- Cake cards here -->
+                <div class="product-card">
+                    <img src="./image/c1.png" alt="Chocolate Cake">
+                    <h3>Chocolate Cake</h3>
+                    <div class="star">
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                    </div>
+                    <p>Has three layers fluffy and moist, filled to brim with chocolate chips</p>
+                    <select class="cakeWeight" data-index="0">
+                        <option value="0.5">0.5 kg</option>
+                        <option value="1">1 kg</option>
+                    </select>
+                    <h6><span class="selectedWeight">0.5 kg</span> - Rs. <span class="cakePrice" data-price="350">350</span></h6>
+                    <button id="addToCartBtn" class="addToCartBtn">Add Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./image/c2.png" alt="Dark Forest Cake">
+                    <h3>Dark Forest Cake</h3>
+                    <div class="star">
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                    </div>
+                    <p>Layered with chocolate ganache and topped with chocolate truffles</p>
+                    <select class="cakeWeight" data-index="1">
+                        <option value="0.5">0.5 kg</option>
+                        <option value="1">1 kg</option>
+                    </select>
+                    <h6><span class="selectedWeight">0.5 kg</span> - Rs. <span class="cakePrice" data-price="500">500</span></h6>
+                    <button id="addToCartBtn" class="addToCartBtn">Add Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./image/c8.png" alt="Customised cake">
+                    <h3>Customised cake</h3>
+                    <div class="star">
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                    </div>
+                    <p>Layered to your wishes, crafted with love for your special moments</p>
+                    <select class="cakeWeight" data-index="2">
+                        <option value="0.5">0.5 kg</option>
+                        <option value="1">1 kg</option>
+                    </select>
+                    <h6><span class="selectedWeight">0.5 kg</span> - Rs. <span class="cakePrice" data-price="500">500</span></h6>
+                    <button id="addToCartBtn" class="addToCartBtn">Add Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./image/c13.png" alt="Blue Choco Cake">
+                    <h3>Blue Choco Cake</h3>
+                    <div class="star">
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                    </div>
+                    <p>Moist blueberry sponge layered with velvety chocolate ganache with truffles</p>
+                    <select class="cakeWeight" data-index="3">
+                        <option value="0.5">0.5 kg</option>
+                        <option value="1">1 kg</option>
+                    </select>
+                    <h6><span class="selectedWeight">0.5 kg</span> - Rs. <span class="cakePrice" data-price="500">500</span></h6>
+                    <button id="addToCartBtn" class="addToCartBtn">Add Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./image/c5.png" alt="Red Velvet Cake">
+                    <h3>Blue Choco Cake</h3>
+                    <div class="star">
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                    </div>
+                    <p>A red, crimson, or scarlet-colored layer cake, layered with ermine icing</p>
+                    <select class="cakeWeight" data-index="4">
+                        <option value="0.5">0.5 kg</option>
+                        <option value="1">1 kg</option>
+                    </select>
+                    <h6><span class="selectedWeight">0.5 kg</span> - Rs. <span class="cakePrice" data-price="500">500</span></h6>
+                    <button id="addToCartBtn" class="addToCartBtn">Add Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./image/c6.png" alt="Red Velvet Cheese Cake">
+                    <h3>Red Velvet Cheese Cake</h3>
+                    <div class="star">
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                    </div>
+                    <p>Moist blueberry sponge layered with velvety chocolate ganache with truffles</p>
+                    <select class="cakeWeight" data-index="5">
+                        <option value="0.5">0.5 kg</option>
+                        <option value="1">1 kg</option>
+                    </select>
+                    <h6><span class="selectedWeight">0.5 kg</span> - Rs. <span class="cakePrice" data-price="500">500</span></h6>
+                    <button id="addToCartBtn" class="addToCartBtn">Add Cart</button>
+                </div>
+                <!-- More product cards... -->
+            </div>
+            <div class="product-grid" id="more-cakes">
+                <div class="product-card hidden">
+                    <img src="./image/c3.png" alt="Pineapple Cake">
+                    <div class="card-body">
+                        <h3>Pineapple Cake</h3>
+                        <div class="star">
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star"></i>
+                        </div>
+                        <p>Fresh whipped cream and luscious chunks of pineapple</p>
+                        <select class="cakeWeight" data-index="6">
+                            <option value="0.5">0.5 kg</option>
+                            <option value="1">1 kg</option>
+                        </select>
+                        <h6><span class="selectedWeight">0.5 kg</span> - Rs. <span class="cakePrice" data-price="350">350</span></h6>
+                        <button id="addToCartBtn" class="addToCartBtn">Add Cart</button>
+                    </div>
+                </div>
+                <!-- More product cards... -->
+            </div>
+            <div class="load-more-btn" id="load-more-cakes">Load More Cakes</div>
+        </section>
+        <section>
+            <h2>Donuts</h2>
+            <div class="product-grid" id="donut-grid">
+                <!-- Donut cards here -->
+                <div class="product-card">
+                    <img src="./image/c9.png" alt="Chocolate Donut">
+                    <h3>Chocolate Donut</h3>
+                    <div class="star">
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                    </div>
+                    <p>Delicious chocolate glazed donut topped with sprinkles</p>
+                    <h6>Rs. <span class="donutPrice" data-price="50">50</span> each</h6>
+                    <button id="addToCartBtn" class="addToCartBtn">Add Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./image/c10.png" alt="Vanilla Donut">
+                    <h3>Vanilla Donut</h3>
+                    <div class="star">
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star checked"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                    </div>
+                    <p>Classic vanilla glazed donut with rainbow sprinkles</p>
+                    <h6>Rs. <span class="donutPrice" data-price="45">45</span> each</h6>
+                    <button id="addToCartBtn" class="addToCartBtn">Add Cart</button>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Your Web Application. All rights reserved.</p>
+    </footer>
+    <script>
+             document.addEventListener('DOMContentLoaded', function () {
+    const productCards = document.querySelectorAll('.product-card');
+    const selectedWeightElements = document.querySelectorAll('.cakeWeight');
+    const selectedWeightDisplays = document.querySelectorAll('.selectedWeight');
+    const cakePriceDisplays = document.querySelectorAll('.cakePrice');
+    
+    function updateCakePrice(kgs, index) {
+        const cakePrice = cakePriceDisplays?.[index];
+        const weightDisplay = selectedWeightDisplays?.[index];
+
+        if (weightDisplay) {
+            if (+kgs === 1) {
+                weightDisplay.innerHTML = '1 kg';
+                cakePrice.innerHTML = +cakePrice.dataset.price * 2;
+            }
+
+            if (+kgs === 0.5) {
+                weightDisplay.innerHTML = '0.5 kg';
+                cakePrice.innerHTML = +cakePrice.dataset.price;
+            }
+        }
+    }
+
+    selectedWeightElements.forEach(select => {
+        select.addEventListener('change', function (e) {
+            updateCakePrice(e.target.value, e.target.dataset.index);
+        });
+    });
+});
+
+            // Function to handle add to cart button click
+            function addToCart(cake, weight, price) {
+                // Send AJAX request to shop.php to add item to cart
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        if (xhr.status === 200) {
+                            // Item added successfully
+                            alert("Item added to cart!");
+                            // You can optionally redirect user to cart.php here
+                        } else {
+                            // Error adding item to cart
+                            alert("Error adding item to cart!");
+                        }
+                    }
+                };
+                xhr.open("POST", "shop.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                // Send cake name, weight, and price as parameters
+                xhr.send("cake=" + encodeURIComponent(cake) + "&weight=" + encodeURIComponent(weight) + "&price=" + encodeURIComponent(price));
+            }
+    
+            // Add event listener for Add Cart buttons
+            var addCartBtns = document.querySelectorAll('button.addToCartBtn');
+            addCartBtns.forEach(function(btn) {
+                btn.addEventListener("click", function() {
+                    var card = this.closest(".product-card");
+                    var cake = card.querySelector("h3").textContent;
+                    var weight = card.querySelector(".selectedWeight").textContent;
+                    var price = card.querySelector(".cakePrice").textContent;
+                    addToCart(cake, weight, price);
+                });
+            });
+    
+             // Function to handle logout button click
+document.getElementById("logoutBtn").addEventListener("click", function() {
+    var logoutConfirmation = confirm("Are you sure you want to logout?");
+    if (logoutConfirmation) {
+        alert("Successfully logged out!");
+        // Redirect user to index.html
+        window.location.replace("index.html");
+    }
+});
+
+document.getElementById("load-more-cakes").addEventListener("click", function() {
+            var hiddenCakes = document.querySelectorAll("#more-cakes .product-card.hidden");
+            hiddenCakes.forEach(function(cake) {
+                cake.classList.remove("hidden");
+            });
+            this.style.display = 'none'; // Hide the "Load More" button after all cakes are shown
+        });
+    </script>
+</body>
+
+</html>

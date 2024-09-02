@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <title>Payment Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-md-7 ftco-animate makereservation p-4 px-md-5 pb-md-5">
+                <div class="heading-section ftco-animate mb-5 text-center">
+                    <h1 class="mb-4"> Cake Bake</h1>
+                    <h2 class="mb-4">Thanks for ordering <br>
+                        Visit Again</h2>
+                </div>
+
+				
+                <!-- <div class="last-content">
+                    <form id="apply_coupons_form" action="#" method="post">
+                        <button type="button" id="apply_coupons_btn" class="pay-now-btn" onclick="submitForm('apply_coupons_form')">
+                            Apply Coupons
+                        </button>
+                    </form>
+
+                   \
+                    <form id="netbanking_form" action="#" method="Post">
+                        <button type="button" id="netbanking_btn" class="pay-now-btn" onclick="submitForm('netbanking_form')">
+                            Pay with Netbanking
+                        </button>
+                    </form>
+                </div> -->
+
+                <div class="card-details">
+                    <p>Pay using Credit or Debit card</p>
+                    <!-- Form for paying with Credit or Debit card -->
+                    <form id="card_payment_form" action="payment1.php" method="POST">
+                        <div class="card-number">
+                            <label> Card Number </label>
+                            <input type="text" class="card-number-field" id="card_num" name="card_num" placeholder="###-###-###" />
+                        </div>
+                        <br />
+                        <div class="date-number">
+                            <label> Expiry Date </label>
+                            <input type="text" class="date-number-field" id="date_num" name="date_num" placeholder="DD-MM-YY" />
+                        </div>
+
+                        <div class="cvv-number">
+                            <label> CVV number </label>
+                            <input type="text" class="cvv-number-field" id="cvv_num" name="cvv_num" placeholder="xxx" />
+                        </div>
+                        <div class="nameholder-number">
+                            <label> Card Holder name </label>
+                            <input type="text" class="card-name-field" id="name_num" name="name_num" placeholder="Enter your Name" />
+                        </div>
+                        <a href="index.html">
+                            <input type="submit" value="Submit">
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

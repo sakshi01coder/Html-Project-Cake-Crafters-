@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="cart.css">
+</head>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+
+    <div class="main-content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Cake</th>
+                    <th>Weight (kg)</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through cart items and display -->
+                <?php foreach($_SESSION['cart'] as $item): ?>
+                <tr>
+                    <td><?php echo $item['cake']; ?></td>
+                    <td><?php echo $item['weight']; ?></td>
+                    <td><?php echo $item['price']; ?></td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+
+        <!-- Pay button with total value -->
+        <div class="pay-section">
+            <p>Total: <?php echo calculateTotal(); ?></p>
+            <form action="payment.html" method="post">
+                <input type="submit" value="Pay">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

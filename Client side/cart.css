@@ -1,0 +1,71 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables */
+:root {
+    --primary-color: #EDDBC7;
+    --secondary-color: #A7727D;
+    --accent-color: #a7727d82;
+    --white: #fff;
+    --black: #000;
+}
+
+/* Body */
+body {
+    font-family: 'Uchen', serif;
+    background-color: var(--primary-color);
+}
+
+/* Header */
+header {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main content */
+.main-content {
+    padding: 20px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--black);
+}
+
+/* Pay button section */
+.pay-section {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.pay-section p {
+    font-weight: bold;
+}
+
+.pay-section input[type="submit"] {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pay-section input[type="submit"]:hover {
+    background-color: #8C5E5E; /* Darken accent color on hover */
+}

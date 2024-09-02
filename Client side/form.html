@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <title>Document</title>
+</head>
+
+<body>
+  
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-md-7 ftco-animate makereservation p-4 px-md-5 pb-md-5">
+                <div class="heading-section ftco-animate mb-5 text-center">
+                    <span class="subheading">Create</span>
+                    <h2 class="mb-4">Your Account</h2>
+                </div>
+                <form action="account_creation_script.php" onsubmit= "return validateForm()" method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="johndoe@gmail.com" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm_password">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-primary py-3 px-5">Create Account</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var confirm_password = document.getElementById("confirm_password").value;
+
+    // Name validation: Should contain only letters and have a character limit of 225
+    var namePattern = /^[A-Za-z\s]{1,225}$/;
+    if (!name.match(namePattern)) {
+        alert("Full Name should contain only letters and have a character limit of 225.");
+        return false; // Prevent form submission
+    }
+
+    // Email validation: Check for valid email syntax
+    var emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    if (!email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
+        return false; // Prevent form submission
+    }
+
+    // Password and Confirm Password validation
+    if (password !== confirm_password) {
+        alert("Password and Confirm Password must match");
+        return false; // Prevent form submission
+    }
+
+    // Additional validation checks can be added here
+
+    // If all validation checks pass, allow the form to be submitted
+    alert("Account created successfully!");
+    return true;
+}
+</script>
+    
+</body>
+
+</html>
