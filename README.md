@@ -1,5 +1,5 @@
 
-#Cake Crafters
+#Cake Craft
 
 Cake Crafters is a web application designed for managing and selling cakes online. This project includes both client-side and admin-side functionalities, with a focus on a seamless user experience.
 Features
@@ -19,7 +19,8 @@ To run this project, you need:
 
 Installation
 1. Clone the Repository
-git clone https://github.com/your-username/cake-crafters.git
+        or
+   Download the zip file.
 
 2. Set Up XAMPP
 
@@ -31,9 +32,25 @@ git clone https://github.com/your-username/cake-crafters.git
 
     Create a Database:
         Open phpMyAdmin.
-        Create a new database named cake_crafters.
+        Create a the required database according to the php files.
 
-    Import Database Structure:
-        Navigate to the db folder in your project directory.
+    
+4. Place Project Files
+
+    Move Project Files:
+        Copy the entire cake-crafters folder to the htdocs directory of your XAMPP installation (e.g., C:\xampp\htdocs).
+
+    Verify Files:
+        Ensure that all necessary files and folders (images, scripts, styles) are in place.
+
+5. Access the Application
+
+    Open Your Browser:
+        Navigate to http://localhost/CakeBake.
 
 
+
+Usage
+
+    Client-Side: Browse cakes, add them to your cart, and place orders.
+    Admin-Side: Manage cake products, view and manage orders.
