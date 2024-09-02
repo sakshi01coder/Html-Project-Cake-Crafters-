@@ -1,5 +1,5 @@
 
-#Cake Craft
+#Cake Bake
 
 Cake Crafters is a web application designed for managing and selling cakes online. This project includes both client-side and admin-side functionalities, with a focus on a seamless user experience.
 Features
